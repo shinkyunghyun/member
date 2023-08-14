@@ -1,0 +1,19 @@
+{{>join/header}}
+{{#editmem}}
+<form class="container" action="/join/update"  method="post">
+    <input name="id" type="hidden" value="{{id}}">
+    <label class="form-lable">이메일</label>
+    <div class="mb-3">
+        <input name="email" type="text" class="form-control" value="{{email}}">
+    </div>
+
+    <div class="mb-3">
+        <label class="form-lable">비밀번호</label>
+        <input name="password" type="password" class="form-control" value="{{password}}">
+    </div>
+    <button type="submit" class="btn btn-primary">수정</button>
+    <a href="/onelist/{{id}}" class="btn btn-primary">Back</a>
+</form>
+{{/editmem}}
+
+{{>join/footer}}

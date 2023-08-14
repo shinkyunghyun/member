@@ -1,0 +1,21 @@
+{{>join/header}}
+
+<form class="container" action="/join/create" method="post">
+    <label class="form-lable">이메일</label>
+    <div class="mb-3">
+        <input name="email" type="text" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label class="form-lable">비밀번호</label>
+        <input name="password" type="password" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary">가입</button>
+    <a href="memlist" class="btn btn-primary">회원목록</a>
+
+
+
+</form>
+
+
+{{>join/footer}}

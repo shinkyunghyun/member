@@ -1,0 +1,28 @@
+{{>join/header}}
+
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">이메일</th>
+        <th scope="col">비밀번호</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    {{#onelist}}
+        <!--articleList의 사용 범위를 지정하였으므로, article에 담긴 id,title,content 를 머스테치 문법으로 변경-->
+        <tr>
+            <th scope="row">{{id}}</th>
+            <td>{{email}}</td>
+            <td>{{password}}</td>
+        </tr>
+    {{/onelist}}
+    </tbody>
+</table>
+<a href="/member" class="btn btn-primary">회원가입</a>
+<a href="/memlist" class="btn btn-primary">회원목록</a>
+<a href="/onelist/{{onelist.id}}/edit" class="btn btn-primary">정보수정</a>
+<a href="/onelist/{{onelist.id}}/delete" class="btn btn-danger">삭제</a>
+
+{{>join/footer}}
